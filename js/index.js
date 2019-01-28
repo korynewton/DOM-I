@@ -108,3 +108,25 @@ contactPList[1].textContent = siteContent["contact"]["phone"]
 contactPList[2].textContent = siteContent["contact"]["email"]
 
 footerP.textContent = siteContent["footer"]["copyright"]
+
+
+//Adding New Content:
+navSelector.forEach(element => element.style.color = 'green')
+
+//Creating <a> tag "What We're Up To"
+ATagWhatUp = document.createElement("a")
+ATagWhatUp.href = '#'
+ATagWhatUp.textContent = "What We're Up To"
+
+//Creating <a> tag "Values"
+ATagValues = document.createElement("a")
+ATagValues.href = '#'
+ATagValues.textContent = "Values"
+
+
+const parentNav = document.querySelector('header nav')
+
+parentNav.prepend(ATagWhatUp)
+parentNav.append(ATagValues)
+
+
