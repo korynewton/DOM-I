@@ -15,7 +15,7 @@ msTens.textContent = 0;
 
 
 setInterval(function() {
-    if (msTens.textContent < 9) {
+    if (msTens.textContent < 9 && tens.textContent < 1) {
         ++msTens.textContent
     }
     else {
@@ -24,7 +24,7 @@ setInterval(function() {
     }, 10)
     
     setInterval(function() {
-        if (msHundreds.textContent < 9) {
+        if (msHundreds.textContent < 9 && tens.textContent < 1) {
             ++msHundreds.textContent
         }
         else {
@@ -35,7 +35,7 @@ setInterval(function() {
     
     
     setInterval(function() {
-        if (ones.textContent < 9) {
+        if (ones.textContent < 9 && tens.textContent < 1) {
             ++ones.textContent
         }
         else {
@@ -44,7 +44,7 @@ setInterval(function() {
     }, 1000)
     
     setInterval(function() {
-        if (ones.textContent < 9) {
+        if (tens.textContent < 9 && tens.textContent < 9) {
             ++tens.textContent
         }
         else {
