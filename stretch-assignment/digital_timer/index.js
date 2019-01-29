@@ -4,8 +4,9 @@ const msHundreds = document.getElementById('msHundreds')
 const msTens = document.getElementById('msTens')
 
 
-// // const allDigits = document.getElementsByTag('t');
-// // allDigits.forEach(element => element.textContent = 0)
+
+const allDigits = document.querySelectorAll('.digit');
+
 
 //Initialize at 0:
 tens.textContent = 0;
@@ -23,32 +24,33 @@ setInterval(function() {
     }
     }, 10)
     
-    setInterval(function() {
-        if (msHundreds.textContent < 9 && tens.textContent < 1) {
-            ++msHundreds.textContent
-        }
-        else {
-            msHundreds.textContent = 0;
-        }
-    }, 100)
-    
-    
-    
-    setInterval(function() {
-        if (ones.textContent < 9 && tens.textContent < 1) {
-            ++ones.textContent
-        }
-        else {
-            ones.textContent = 0;
-        }
-    }, 1000)
-    
-    setInterval(function() {
-        if (tens.textContent < 9 && tens.textContent < 9) {
-            ++tens.textContent
-        }
-        else {
-            tens.textContent = 0;
-        }
-    }, 10000)
+setInterval(function() {
+    if (msHundreds.textContent < 9 && tens.textContent < 1) {
+        ++msHundreds.textContent
+    }
+    else {
+        msHundreds.textContent = 0;
+    }
+}, 100)
+     
+setInterval(function() {
+    if (ones.textContent < 9 && tens.textContent < 1) {
+        ++ones.textContent
+    }
+    else {
+        ones.textContent = 0;
+        allDigits.forEach(element => element.style.color = 'red')
+    }
+}, 1000)
+
+setInterval(function() {
+    if (tens.textContent < 1) {
+        ++tens.textContent
+    }
+}, 10000)
+
+
+
+
+
 
